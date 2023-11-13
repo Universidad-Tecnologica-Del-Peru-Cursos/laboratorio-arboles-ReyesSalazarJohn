@@ -1,1 +1,15 @@
 package ArbolEnteros;
+
+class enteros{
+ private int valor;
+ public enteros (int valor){
+    this.valor=valor;
+ }
+   public int getvalor() {
+        return valor;
+    }
+   @Override
+    public String toString() {
+        return "Enteros{" + "valor=" + valor}';
+    }
+}
