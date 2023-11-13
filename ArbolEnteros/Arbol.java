@@ -23,6 +23,28 @@ class Arbol {
         }
     }
 
+    public void eliminar (int valor){
+        raiz=eliminar(raiz,valor);
+    }
+
+    private Nodo eliminar(Nodo nodo, int valor) {
+        if (nodo == null) {
+            return null;
+        }
+
+        if (valor < nodo.valor.getvalor()) {
+            nodo.izquierda = eliminar(nodo.izquierda, valor);
+        } else if (valor < nodo.valor.getvalor()) {
+            nodo.derecha = eliminar(nodo.derecha, valor);
+        } else 
+            if (nodo.izquierda == null) {
+                return nodo.derecha;
+            } else if (nodo.derecha == null) {
+                return nodo.izquierda;
+            }
+        return nodo;
+    }
+
     public void recorrerPreOrden() {
         recorrerPreOrden(raiz);
     }
